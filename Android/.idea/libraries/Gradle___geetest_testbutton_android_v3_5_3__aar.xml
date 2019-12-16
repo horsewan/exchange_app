@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: :geetest_testbutton_android_v3.5.3:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9cb38d161d0ece86d88c559eca080416/geetest_testbutton_android_v3.5.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9cb38d161d0ece86d88c559eca080416/geetest_testbutton_android_v3.5.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,39 @@
+1. https://help.aliyun.com/document_detail/25426.html?spm=a2c4g.11186623.6.610.yemgNN
+添加硬盘
+
+
+2. 下载
+cd /mnt
+wget https://bintray.com/artifact/download/omni/OmniBinaries/omnicore-0.3.0-x86_64-linux-gnu.tar.gz
+
+[其他版本下载地址](http://www.omnilayer.org/download.html)
+
+tar -xzvf omnicore-0.3.0-x86_64-linux-gnu.tar.gz
+
+3.配置
+mkdir usdt
+cd usdt
+vim bitcoin.conf
+
+
+listen=1
+server=1
+rpcuser=usdtuser
+rpcpassword=kmgcB6MKdpXDvcjXeR8nubP9TrRnmtzN
+rpcport=8233
+rpcallowip=172.21.247.154
+
+4. 启动
+nohup /mnt/omnicore-0.3.0/./bin/omnicored --datadir=/mnt/usdt --conf=/mnt/usdt/bitcoin.conf &
+
+5. 创建启动脚本
+vim start_service.sh
+
+#!/bin/bash
+nohup /mnt/omnicore-0.3.0/./bin/omnicored --datadir=/mnt/usdt --conf=/mnt/usdt/bitcoin.conf &
+exit 0
+
+sudo chmod +x start_service.sh
+sudo mv start_service.sh /etc/init.d/
+cd /etc/init.d/
+sudo update-rc.d start_service.sh defaults 90
